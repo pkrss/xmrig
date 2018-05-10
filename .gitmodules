@@ -1,3 +1,6 @@
 [submodule "compat/xmrig-deps"]
 	path = compat/xmrig-deps
 	url = https://github.com/xmrig/xmrig-deps.git
+[submodule "compat/libuv"]
+	path = compat/libuv
+	url = https://github.com/libuv/libuv.git

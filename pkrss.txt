@@ -1,4 +1,4 @@
 
 mkdir build
 cd build
-cmake .. -G "Visual Studio 15 2017 Win64" -DXMRIG_DEPS=..\compat\xmrig-deps\msvc2017\x64
+cmake .. -G "Visual Studio 15 2017 Win64" -DXMRIG_DEPS="..\compat\xmrig-deps\msvc2017\x64" -DWITH_HTTPD=OFF -DXMRIG_ARM=ON -DWITH_AEON=ON -DWITH_SUMO=ON -DWITH_IPBC=ON

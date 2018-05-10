@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7D15F6E7-2665-3E51-A9A4-B56CEEA95167}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>cpuid</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cpuid</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cpuid</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">cpuid</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">cpuid</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;RAPIDJSON_SSE2;__STDC_FORMAT_MACROS;UNICODE;NDEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;VERSION="0.4.0";CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;RAPIDJSON_SSE2;__STDC_FORMAT_MACROS;UNICODE;NDEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;VERSION=\"0.4.0\";CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;RAPIDJSON_SSE2;__STDC_FORMAT_MACROS;UNICODE;NDEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;VERSION="0.4.0";CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <Optimization>Full</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;RAPIDJSON_SSE2;__STDC_FORMAT_MACROS;UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;VERSION="0.4.0";CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;RAPIDJSON_SSE2;__STDC_FORMAT_MACROS;UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;VERSION=\"0.4.0\";CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;RAPIDJSON_SSE2;__STDC_FORMAT_MACROS;UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;VERSION="0.4.0";CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;RAPIDJSON_SSE2;__STDC_FORMAT_MACROS;UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;VERSION="0.4.0";CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;RAPIDJSON_SSE2;__STDC_FORMAT_MACROS;UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;VERSION=\"0.4.0\";CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;RAPIDJSON_SSE2;__STDC_FORMAT_MACROS;UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;VERSION="0.4.0";CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;RAPIDJSON_SSE2;__STDC_FORMAT_MACROS;UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;VERSION="0.4.0";CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;RAPIDJSON_SSE2;__STDC_FORMAT_MACROS;UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;VERSION=\"0.4.0\";CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;RAPIDJSON_SSE2;__STDC_FORMAT_MACROS;UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;VERSION="0.4.0";CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\work\git\third\xmrig\src\3rdparty\libcpuid\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule E:/work/git/third/xmrig/src/3rdparty/libcpuid/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\develop\my\bin\cmake.exe -HE:/work/git/third/xmrig -BE:/work/git/third/xmrig/build --check-stamp-file E:/work/git/third/xmrig/build/src/3rdparty/libcpuid/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:/work/git/third/xmrig/src/3rdparty/libcpuid/CMakeLists.txt;E:\work\git\third\xmrig\src\3rdparty\libcpuid\CMakeLists.txt;D:\develop\my\share\cmake-3.11\Modules\CMakeDetermineASM_MASMCompiler.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeDetermineASMCompiler.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeDetermineCompiler.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeDetermineCompilerId.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeCompilerIdDetection.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeFindBinUtils.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeASMCompiler.cmake.in;E:\work\git\third\xmrig\build\CMakeFiles\3.11.0\CMakeASM_MASMCompiler.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeASM_MASMInformation.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeASMInformation.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeTestASM_MASMCompiler.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeTestASMCompiler.cmake;E:\work\git\third\xmrig\src\3rdparty\libcpuid\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\work\git\third\xmrig\build\src\3rdparty\libcpuid\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/work/git/third/xmrig/src/3rdparty/libcpuid/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\develop\my\bin\cmake.exe -HE:/work/git/third/xmrig -BE:/work/git/third/xmrig/build --check-stamp-file E:/work/git/third/xmrig/build/src/3rdparty/libcpuid/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:/work/git/third/xmrig/src/3rdparty/libcpuid/CMakeLists.txt;E:\work\git\third\xmrig\src\3rdparty\libcpuid\CMakeLists.txt;D:\develop\my\share\cmake-3.11\Modules\CMakeDetermineASM_MASMCompiler.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeDetermineASMCompiler.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeDetermineCompiler.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeDetermineCompilerId.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeCompilerIdDetection.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeFindBinUtils.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeASMCompiler.cmake.in;E:\work\git\third\xmrig\build\CMakeFiles\3.11.0\CMakeASM_MASMCompiler.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeASM_MASMInformation.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeASMInformation.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeTestASM_MASMCompiler.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeTestASMCompiler.cmake;E:\work\git\third\xmrig\src\3rdparty\libcpuid\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\work\git\third\xmrig\build\src\3rdparty\libcpuid\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule E:/work/git/third/xmrig/src/3rdparty/libcpuid/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\develop\my\bin\cmake.exe -HE:/work/git/third/xmrig -BE:/work/git/third/xmrig/build --check-stamp-file E:/work/git/third/xmrig/build/src/3rdparty/libcpuid/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:/work/git/third/xmrig/src/3rdparty/libcpuid/CMakeLists.txt;E:\work\git\third\xmrig\src\3rdparty\libcpuid\CMakeLists.txt;D:\develop\my\share\cmake-3.11\Modules\CMakeDetermineASM_MASMCompiler.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeDetermineASMCompiler.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeDetermineCompiler.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeDetermineCompilerId.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeCompilerIdDetection.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeFindBinUtils.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeASMCompiler.cmake.in;E:\work\git\third\xmrig\build\CMakeFiles\3.11.0\CMakeASM_MASMCompiler.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeASM_MASMInformation.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeASMInformation.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeTestASM_MASMCompiler.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeTestASMCompiler.cmake;E:\work\git\third\xmrig\src\3rdparty\libcpuid\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\work\git\third\xmrig\build\src\3rdparty\libcpuid\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule E:/work/git/third/xmrig/src/3rdparty/libcpuid/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\develop\my\bin\cmake.exe -HE:/work/git/third/xmrig -BE:/work/git/third/xmrig/build --check-stamp-file E:/work/git/third/xmrig/build/src/3rdparty/libcpuid/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:/work/git/third/xmrig/src/3rdparty/libcpuid/CMakeLists.txt;E:\work\git\third\xmrig\src\3rdparty\libcpuid\CMakeLists.txt;D:\develop\my\share\cmake-3.11\Modules\CMakeDetermineASM_MASMCompiler.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeDetermineASMCompiler.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeDetermineCompiler.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeDetermineCompilerId.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeCompilerIdDetection.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeFindBinUtils.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeASMCompiler.cmake.in;E:\work\git\third\xmrig\build\CMakeFiles\3.11.0\CMakeASM_MASMCompiler.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeASM_MASMInformation.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeASMInformation.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeTestASM_MASMCompiler.cmake;D:\develop\my\share\cmake-3.11\Modules\CMakeTestASMCompiler.cmake;E:\work\git\third\xmrig\src\3rdparty\libcpuid\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\work\git\third\xmrig\build\src\3rdparty\libcpuid\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\work\git\third\xmrig\src\3rdparty\libcpuid\libcpuid.h" />
+    <ClInclude Include="E:\work\git\third\xmrig\src\3rdparty\libcpuid\libcpuid_types.h" />
+    <ClInclude Include="E:\work\git\third\xmrig\src\3rdparty\libcpuid\libcpuid_constants.h" />
+    <ClInclude Include="E:\work\git\third\xmrig\src\3rdparty\libcpuid\libcpuid_internal.h" />
+    <ClInclude Include="E:\work\git\third\xmrig\src\3rdparty\libcpuid\amd_code_t.h" />
+    <ClInclude Include="E:\work\git\third\xmrig\src\3rdparty\libcpuid\intel_code_t.h" />
+    <ClInclude Include="E:\work\git\third\xmrig\src\3rdparty\libcpuid\recog_amd.h" />
+    <ClInclude Include="E:\work\git\third\xmrig\src\3rdparty\libcpuid\recog_intel.h" />
+    <ClInclude Include="E:\work\git\third\xmrig\src\3rdparty\libcpuid\asm-bits.h" />
+    <ClInclude Include="E:\work\git\third\xmrig\src\3rdparty\libcpuid\libcpuid_util.h" />
+    <ClCompile Include="E:\work\git\third\xmrig\src\3rdparty\libcpuid\cpuid_main.c" />
+    <ClCompile Include="E:\work\git\third\xmrig\src\3rdparty\libcpuid\asm-bits.c" />
+    <ClCompile Include="E:\work\git\third\xmrig\src\3rdparty\libcpuid\recog_amd.c" />
+    <ClCompile Include="E:\work\git\third\xmrig\src\3rdparty\libcpuid\recog_intel.c" />
+    <ClCompile Include="E:\work\git\third\xmrig\src\3rdparty\libcpuid\libcpuid_util.c" />
+    <MASM Include="E:\work\git\third\xmrig\src\3rdparty\libcpuid\masm-x64.asm" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:\work\git\third\xmrig\build\ZERO_CHECK.vcxproj">
+      <Project>{B26C4B81-B4D9-34F8-BE12-33B4846BB66F}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>

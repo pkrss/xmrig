@@ -1,2 +1,4 @@
 /build
 /CMakeLists.txt.user
+/winbuild/x64
+/winbuild/.vs
