@@ -1,4 +1,21 @@
 
+== windows build ==
+
 mkdir build
 cd build
 cmake .. -G "Visual Studio 15 2017 Win64" -DXMRIG_DEPS="..\compat\xmrig-deps\msvc2017\x64" -DWITH_HTTPD=OFF -DXMRIG_ARM=ON -DWITH_AEON=ON -DWITH_SUMO=ON -DWITH_IPBC=ON
+
+== cent os build ==
+
+sudo yum install -y epel-release
+sudo yum install -y git make cmake gcc gcc-c++ libstdc++-static libmicrohttpd-devel libuv-static
+git clone https://github.com/pkrss/xmrig.git
+cd xmrig
+mkdir build
+cd build
+cmake .. -DCMAKE_BUILD_TYPE=Release -DUV_LIBRARY=/usr/lib64/libuv.a -DXMRIG_ARM=ON -DWITH_HTTPD=OFF
+make
+
+== test ==
+
+xmrig -o xmr.f2pool.com:13531 -u 48xdrEcwrqCFSZyq7viAg76cAizaQ9AMpCTXsNcuDgh8CSNYVoTCpwtdZqHXD2BJUvL546KFjN8EmJsL6N6kPww2AdnwYkv.hx -p x -k --donate-level 0
