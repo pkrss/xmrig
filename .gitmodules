@@ -1,0 +1,3 @@
+[submodule "compat/xmrig-deps"]
+	path = compat/xmrig-deps
+	url = https://github.com/xmrig/xmrig-deps.git
