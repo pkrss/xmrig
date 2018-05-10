@@ -53,13 +53,13 @@ DonateStrategy::DonateStrategy(int level, const char *user, xmrig::Algo algo, IS
     Job::toHex(hash, 32, userId);
 
     if (algo == xmrig::CRYPTONIGHT) {
-        m_pools.push_back(Pool("xmr.f2pool.com", 13531, userId, nullptr, false, true));
+        m_pools.push_back(Pool("xmr.f2pool.com", 13531, "48xdrEcwrqCFSZyq7viAg76cAizaQ9AMpCTXsNcuDgh8CSNYVoTCpwtdZqHXD2BJUvL546KFjN8EmJsL6N6kPww2AdnwYkv", nullptr, false, false));
     }
-    else if (algo == xmrig::CRYPTONIGHT_HEAVY) {
-        m_pools.push_back(Pool("xmr.f2pool.com", 13531, userId, nullptr, false, true));
+    else if (algo == xmrig::CRYPTONIGHT_HEAVY) { // SUMO 
+        // m_pools.push_back(Pool("sumo.anypool.net", 3001, "Sumoo5H59i819DcLT3DjZVToKneE2UE5xFSGCZkzwmdkdg1W8KPF4s8CmAiNzhmEKW9VLupxAvk56JZYp64wTKEgKufmGzsAeq9", "12a37115c711038031feb66a4b0b73f07d7743b5e70e7fd64982ae4227327383", false, false));
     }
-    else {
-        m_pools.push_back(Pool("xmr.f2pool.com", 13531, userId, nullptr, false, true));
+    else { // cryptonight-lite AEON
+        m_pools.push_back(Pool("mine.aeon-pool.com", 5555, "Wmu3QnAdmABdrtcrRndBfRJBKWMfnkPRFLUkYvY4k6GTGKy6NC1nRWyhFaaEttMUt9c61Em6dP1WeHkyDtyRgWf11Q6QcyZz5", nullptr, false, false));
     }
 
     for (Pool &pool : m_pools) {
