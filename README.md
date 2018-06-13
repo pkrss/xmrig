@@ -118,16 +118,17 @@ Please note performance is highly dependent on system load. The numbers above ar
 * Enable fast memory (Large/Huge pages).
 
 ## Donations
-* XMR: `48edfHu7V9Z84YzzMa6fUueoELZ9ZRXq9VetWzYGzKt52XU5xvqgzYnDK9URnRoJMk1j8nLwEVsaSWJ4fhdUyZijBGUicoD`
-* BTC: `1P7ujsXeX7GxQwHNnJsRMgAdNkFZmNVqJT`
+
+* ETH: 0x607DB376b0EDEf8Cbf346443De2395F046140b1E  
+* BTC: 3MWdCDHTkA9HkJ5S3rZCb8Tfqtx4GDev2z  
 
 ## Release checksums
 ### SHA-256
 ```
-ca60d04204aa3195e8cd72887c7deced1a7c664e538256f138b5698d381ceb00 xmrig-2.6.2-xenial-amd64.tar.gz/xmrig-2.6.2/xmrig
-49dc64eeecdbfffb452ad3cd7a0118d8640208b0b898b2901464d0be6183c169 xmrig-2.6.2-gcc-win32.zip/xmrig.exe
-56141544ac6d03565909b3043fab104bf40cadb32d53a12d821e1328bc50f087 xmrig-2.6.2-gcc-win64.zip/xmrig.exe
-24661a8807f4b991c79e587e846aaea589720ed84d79afb41d14709a6fb908ce xmrig-2.6.2-msvc-win64.zip/xmrig.exe
+dbc2b0f92df5098dc91a361febfda46382d347ae3085415f35e1637b7ebc67e9 xmrig-2.6.3-xenial-amd64.tar.gz/xmrig-2.6.3/xmrig
+b54ffe80cd54ac486f03f064c09de80b6ec29f19ddebb50a8d7316a947045b85 xmrig-2.6.3-gcc-win32.zip/xmrig.exe
+c828ed21bbaf71a808b26928ab1eb6f6355029f2b731a639043733e6b48e9d77 xmrig-2.6.3-gcc-win64.zip/xmrig.exe
+2e7432d14546b510506ccc22df62ef334d424d02fbc6baaa7a0498a0102de156 xmrig-2.6.3-msvc-win64.zip/xmrig.exe
 ```
 
 ## Contacts
