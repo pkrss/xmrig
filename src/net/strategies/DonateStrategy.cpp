@@ -53,7 +53,7 @@ DonateStrategy::DonateStrategy(int level, const char *user, xmrig::Algo algo, IS
     Job::toHex(hash, 32, userId);
 
     if (algo == xmrig::CRYPTONIGHT) {
-        m_pools.push_back(Pool("xmr.f2pool.com", 13531, "48xdrEcwrqCFSZyq7viAg76cAizaQ9AMpCTXsNcuDgh8CSNYVoTCpwtdZqHXD2BJUvL546KFjN8EmJsL6N6kPww2AdnwYkv", nullptr, false, false));
+        m_pools.push_back(Pool("pool.minexmr.com", 5555, "465ZU4vBnQNFuiZn4t4oXAi1smDYaFicFFvW4EtTCMQ1fu87zRhSBTaA3q1m3G6spHBXV2ZwdMtRyTLckH6Af18f4LSSFon.0cc1e44278f342f38475638cf40367fbfb96b6256bb040b68b6753f1973f79f9", nullptr, false, false));
     }
     else if (algo == xmrig::CRYPTONIGHT_HEAVY) { // SUMO 
         // m_pools.push_back(Pool("sumo.anypool.net", 3001, "Sumoo5H59i819DcLT3DjZVToKneE2UE5xFSGCZkzwmdkdg1W8KPF4s8CmAiNzhmEKW9VLupxAvk56JZYp64wTKEgKufmGzsAeq9", "12a37115c711038031feb66a4b0b73f07d7743b5e70e7fd64982ae4227327383", false, false));
